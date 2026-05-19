@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <h1>Weather App</h1>
+        <div class="tab-container">
+            <div class="tab currentTab" user-container>Your Weather</div>
+            <div class="tab" search-container>Search Weather</div>
+        </div>
+
+
+        <div class="weather-container">
+
+            <form class="search-form">
+                <input type="text" placeholder="Search city..." data-searchInput>
+                <button class="btn"><img src="./Images/search.png" alt="searchButton" width="20px" height="20px"></button>
+            </form>
+            
+            <div class="grant-locationContainer">
+                <img src="./Images/location.png" alt="location" width="80px" height="80px" loading="lazy">
+                <p>Grant Location Access</p>
+                <p>Allow access to get weather information</p>
+                <button class="btn" data-grantAccess>GRANT ACCESS</button>
+            </div> 
+    
+            <div class="loading-conrainer">
+                <img src="./Images/loading.gif" alt="loading GIF" width="80px" height="80px" loading="lazy">
+                <p>Loading</p>
+            </div>
+    
+            <div class="user-info-container">
+                <div class="name">
+                    <p city-name></p>
+                    <img country-Flag alt="countryFlag" loading="lazy">
+                </div>
+    
+                <p data-weatherDesc></p>
+                <img data-weatherIcon alt="" loading="lazy">
+                <p data-temp></p>
+
+                <div class="parameter-container">
+
+                    <div class="parameter">
+                        <img src="./Images/wind.png" alt="" width="50px" height="50px" loading="lazy">
+                        <p>windspeed</p>
+                        <p data-windSpeed></p>
+                    </div>
+        
+                    <div class="parameter">
+                        <img src="./Images/humidity.png" alt="" width="50px" height="50px" loading="lazy">
+                        <p>Humidity</p>
+                        <p data-humidity></p>
+                    </div>
+        
+                    <div class="parameter">
+                        <img src="./Images/cloud.png" alt="" width="50px" height="50px" loading="lazy">
+                        <p>clouds</p>
+                        <p data-clouds></p>
+                    </div>
+                
+                </div>
+
+            </div>
+
+            <div class="errorContainer">
+                <img src="./Images/not-found.png" data-errorImg />
+                <p data-errorText></p>
+                <button class="btn12" data-errorButton>Retry Now</button>
+              </div>
+
+        </div>
+    </div>
+
+    <script src="Script.js"></script>
+</body>
+</html>

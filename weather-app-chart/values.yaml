@@ -1,0 +1,16 @@
+replicaCount: 2
+
+image:
+  repository: honeyshah062/weather-app
+  tag: v1
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 80
+
+ingress:
+  className: nginx
+  host: weather-app.local
+  path: /
